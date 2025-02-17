@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.xhomerly.romannumeralcalc.Controller">
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xhomerly.romannumeralcalc.Controller">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <Label text="Roman numerals:">
+      <font>
+         <Font size="16.0" />
+      </font></Label>
+   <TextField fx:id="romanInput1" />
+   <HBox alignment="CENTER" prefHeight="51.0" prefWidth="200.0">
+      <children>
+         <Button fx:id="plus" mnemonicParsing="false" text="+">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+         <Button fx:id="minus" mnemonicParsing="false" text="-">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+         <Button fx:id="multiply" mnemonicParsing="false" text="*">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+         <Button fx:id="divide" mnemonicParsing="false" text="/">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+      </children>
+   </HBox>
+   <TextField fx:id="romanInput2" />
+   <Label text="=">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Label>
+   <Label fx:id="output" />
 </VBox>
